@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Sanjana Devi</title>
+    <style>
+        /* Reset and base styling */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #0d1117, #161b22, #1f2937, #0d1117);
+            background-size: 400% 400%;
+            animation: gradientMove 20s ease infinite;
+            font-family: 'Segoe UI', sans-serif;
+            color: #c9d1d9;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Subtle dotted overlay for texture */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 2.8em;
+            color: #f0f6fc;
+            margin-bottom: 15px;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Bio text */
+        p {
+            font-size: 1.1em;
+            color: #8b949e;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.6;
+            margin: 0 20px 30px;
+            animation: fadeIn 2s ease;
+        }
+
+        /* Button-like links */
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #f0f6fc;
+            background-color: #238636;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #2ea043;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer for professionalism */
+        footer {
+            position: absolute;
+            bottom: 15px;
+            font-size: 0.85em;
+            color: #6e7681;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>About Sanjana Devi</h1>
+    <p>
+        Hello! I am <strong>Sanjana Devi</strong>, a Data Science and Analytics enthusiast passionate about AI, Python, and building impactful projects.
+        My work blends creativity and technical skill to deliver meaningful solutions, and this Flask app is just one small creative example!
+    </p>
+
+    <div>
+        <a href="/" class="btn">🏠 Home</a>
+        <a href="/next" class="btn">Next</a>
+    </div>
+
+    <footer>
+        &copy; 2025 Sanjana Devi | Crafted with ❤️
+    </footer>
+</body>
+</html>

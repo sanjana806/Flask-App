@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Routes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #0d1117; /* Dark GitHub background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+            padding: 30px;
+            background: #161b22; /* Darker panel */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            background: #21262d; /* Dark button background */
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #c9d1d9; /* Light gray text */
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background: #238636; /* Professional green hover like GitHub buttons */
+            color: white;
+            border-color: #238636;
+            box-shadow: 0 4px 12px rgba(35, 134, 54, 0.4);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="btn">Home</a>
+        <a href="/sanjana" class="btn">About</a>
+        <a href="/File" class="btn">Flights Data</a>
+        <a href="/file2" class="btn">Sales Data</a>
+        <a href="/file3" class="btn">Mobile Reviews</a>
+        <a href="/file4" class="btn">BMW Sales</a>
+        <a href="/game" class="btn">Game</a>
+    </div>
+</body>
+</html>
