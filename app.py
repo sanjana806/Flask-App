@@ -56,6 +56,7 @@ def file2():
 def file3():
     file_path = os.path.join(BASE_DIR, 'multilingual_mobile_app_reviews_2025.csv')
     df = pd.read_csv(file_path)
+    df = df.iloc[:, :9]
     return render_template(
         'file3.html',
         title="Mobile",
@@ -288,6 +289,7 @@ def pie3():
 
 if __name__ == '__main__':
     app.run(host = "0.0.0.0")
+
 
 
 
