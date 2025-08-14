@@ -65,13 +65,24 @@ def file3():
 
 @app.route('/file4')
 def file4():
+    # Path to CSV
     file_path = os.path.join(BASE_DIR, 'BMW_Car_Sales_Classification.csv')
+
+    # Read CSV
     df = pd.read_csv(file_path)
+
+    # Select only first 9 columns
+    df = df.iloc[:, :9]
+
+    # Render HTML table
     return render_template(
         'file4.html',
         title="BMW",
-        table=df.head().to_html(index=False, classes="table")
+        table=df.head().to_html(index=False, classes="table table-striped table-bordered")
     )
+
+
+
 
 
 @app.route('/bar')
@@ -134,8 +145,8 @@ def bar3():
     data_df = pd.read_csv(file_path).head()
 
     plt.figure(figsize=(10, 6))
-    plt.bar(data_df["Mileage_KM"], data_df["Price_USD"])
-    plt.xlabel("Mileage (KM)")
+    plt.bar(data_df["Year"], data_df["Price_USD"])
+    plt.xlabel("Year")
     plt.ylabel("Price (USD)")
     plt.grid(False)
 
@@ -277,4 +288,5 @@ def pie3():
 
 if __name__ == '__main__':
     app.run(port=4000,host = "0.0.0.0", debug=True)
+
 
